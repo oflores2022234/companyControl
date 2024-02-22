@@ -5,17 +5,17 @@ import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
+import userRoutes from '../src/users/user.routes.js';
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-        //this.usuarioPath = '/coffeApi/v1/users'
-        //this.authPath = '/coffeApi/v1/auth'
+        this.usuarioPath = '/companyControl/v1/users'
 
         this.middlewares();
         this.conectarDB();
-        //this.routes();
+        this.routes();
     }
 
     async conectarDB(){
@@ -30,10 +30,9 @@ class Server{
         this.app.use(morgan('dev'));
     }
 
-    /*routes(){
+    routes(){
         this.app.use(this.usuarioPath, userRoutes);
-        this.app.use(this.authPath, authRoutes)
-    }*/
+    }
 
     listen(){
         this.app.listen(this.port, () => {
