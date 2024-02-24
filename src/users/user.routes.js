@@ -1,11 +1,11 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import {
-  usuariosGet,
+
   usuariosPost,
-  getUsuarioById,
-  usuariosPut,
-  usuariosDelete,
+  usuariosGet,
+  getUsuarioById
+
 } from "./user.controller.js";
 import {
   existenteEmail,
@@ -17,48 +17,29 @@ const router = Router();
 
 router.get("/", usuariosGet);
 
-router.get(
-  "/:id",
-  [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  getUsuarioById
-);
 
 router.post(
   "/",
   [
-    check("nombre", "El nombre es obligatorio").not().isEmpty(),
-    check("password", "El password debe ser mayor a 6 caracteres").isLength({
+    check("nombre", "The name is obligatory").not().isEmpty(),
+    check("password", "Password must be longer than 6 characters").isLength({
       min: 6,
     }),
-    check("correo", "Este no es un correo válido").isEmail(),
+    check("correo", "This is not a valid email").isEmail(),
     check("correo").custom(existenteEmail),
     validarCampos,
   ],
   usuariosPost
 );
 
-router.put(
+router.get(
   "/:id",
   [
-    check("id", "No es un ID válido").isMongoId(),
+    check("id", "Is not a ID valid").isMongoId(),
     check("id").custom(existeUsuarioById),
     validarCampos,
-  ],
-  usuariosPut
-);
+  ], getUsuarioById);
 
-router.delete(
-  "/:id",
-  [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos,
-  ],
-  usuariosDelete
-);
+
 
 export default router;
