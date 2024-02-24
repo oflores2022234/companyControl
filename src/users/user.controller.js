@@ -65,7 +65,7 @@ export const usuariosDelete = async (req, res) => {
     const {id} = req.params;
 
     const usuario = await User.findByIdAndUpdate(id, { estado: false});
-    //const usuarioAutenticado = req.usuario;
+    const usuarioAutenticado = req.usuario;
 
-    res.status(200).json({msg:'Usuario a eliminar', usuario});
+    res.status(200).json({msg:'Usuario a eliminar', usuario, usuarioAutenticado });
 }
