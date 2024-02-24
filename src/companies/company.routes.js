@@ -4,14 +4,18 @@ import { check } from "express-validator";
 import {
     companyPost,
     companyGet,
-    companyGetAZ
+    companyGetAZ,
+    companiesPut,
+    generateExcelReport
 } from "./company.controller.js";
 
 import { existenteEmailC,
-        validarAñosTrayectoria        
+        validarAñosTrayectoria    ,
+        existeEmpresaById    
 } from "../helpers/db-validators.js"; 
 
 import { validarCampos } from "../middlewares/validar-campos.js";
+import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
 
@@ -33,6 +37,19 @@ router.post(
     ], companyPost );
 
     router.get("/", companyGetAZ);
+
+router.put(
+    "/:id",
+    [
+        validarJWT,
+        check("id", "Isn't a valid id").isMongoId(),
+        check("id").custom(existeEmpresaById),
+        validarCampos,
+    ], companiesPut );
+
+    router.get('/reporte-empresas', generateExcelReport);
+
+
 
     export default router;
 

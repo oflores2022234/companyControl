@@ -23,6 +23,13 @@ export const existeUsuarioById = async (id = '') => {
     }
 }
 
+export const existeEmpresaById = async (id = '') => {
+    const existeEmpresa = await Company.findById(id);
+    if(!existeEmpresa){
+        throw new Error(`El ID: ${id} No existe`)
+    }
+}
+
 export const validarAñosTrayectoria = async (años = "") => {
 
     if (años === null || isNaN(años) || años < 0) {
