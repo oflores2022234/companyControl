@@ -5,6 +5,7 @@ import {
     companyPost,
     companyGet,
     companyGetAZ,
+    companyGetZA,
     companiesPut,
     generateExcelReport
 } from "./company.controller.js";
@@ -36,7 +37,8 @@ router.post(
         validarCampos,
     ], companyPost );
 
-    router.get("/", companyGetAZ);
+    router.get("/companies", companyGetAZ);
+    router.get("/companiess", companyGetZA);
 
 router.put(
     "/:id",
