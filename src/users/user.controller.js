@@ -46,3 +46,21 @@ export const getUsuarioById = async (req, res) => {
     })
 }
 
+export const usuariosPut = async (req, res = response) => {
+    const { id } = req.params;
+    const {_id, password, correo, ...resto} = req.body;
+
+
+    await User.findByIdAndUpdate(id, resto);
+
+    const usuario = await User.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Usuario Actualizado',
+        usuario
+    });
+}
+
+
+
+

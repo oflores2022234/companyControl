@@ -4,7 +4,8 @@ import {
 
   usuariosPost,
   usuariosGet,
-  getUsuarioById
+  getUsuarioById,
+  usuariosPut
 
 } from "./user.controller.js";
 import {
@@ -39,6 +40,14 @@ router.get(
     check("id").custom(existeUsuarioById),
     validarCampos,
   ], getUsuarioById);
+
+  router.put(
+    "/:id",
+    [
+      check("id", "Is not a ID valid").isMongoId(),
+      check("id").custom(existeUsuarioById),
+      validarCampos,
+    ], usuariosPut );
 
 
 
