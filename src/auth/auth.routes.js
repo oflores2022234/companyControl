@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 
-//import { login } from "./auth.controller.js";
+
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { login  } from "./auth.controllers.js";
 
@@ -13,6 +13,7 @@ router.post(
         check('correo', 'This is not a valid email').isEmail(),
         check('password', 'The password is obligatory').not().isEmpty(),
         validarCampos,
-    ], login)
+    ], 
+        login)
 
 export default router
