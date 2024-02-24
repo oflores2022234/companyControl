@@ -81,6 +81,31 @@ export const companyGetZA = async (req = request, res = response) => {
     }
 };
 
+export const companyYearsTrayectory = async (req = request, res = response) => {
+    const { limite, desde } = req.query;
+    const query = { estado: true };
+
+    try {
+        const [total, companies] = await Promise.all([
+            Company.countDocuments(query),
+            Company.find(query)
+                .sort({ añosTrayectoria: -1 }) 
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ]);
+
+        res.status(200).json({
+            total,
+            companies
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            msg: 'Error to list Companies'
+        });
+    }
+};
+
 export const companiesPut = async (req, res = response) =>{
     const { id } = req.params;
     const {_id, ...resto} = req.body;
@@ -95,6 +120,8 @@ export const companiesPut = async (req, res = response) =>{
     });
 
 }
+
+//investigado y entendido   
 
 export const generateExcelReport = async (req, res) => {
     try {
