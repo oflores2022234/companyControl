@@ -2,7 +2,9 @@ import { Router } from "express";
 import { check } from "express-validator";
 
 import {
-    companyPost
+    companyPost,
+    companyGet,
+    companyGetAZ
 } from "./company.controller.js";
 
 import { existenteEmailC,
@@ -12,6 +14,8 @@ import { existenteEmailC,
 import { validarCampos } from "../middlewares/validar-campos.js";
 
 const router = Router();
+
+router.get("/", companyGet);
 
 router.post(
     "/",
@@ -28,4 +32,7 @@ router.post(
         validarCampos,
     ], companyPost );
 
+    router.get("/", companyGetAZ);
+
     export default router;
+
