@@ -26,6 +26,7 @@ router.get("/", companyGet);
 router.post(
     "/",
     [
+        validarJWT,
         check("nombre", "The name is obligatory").not().isEmpty(),
         check("correo", "This isn't a email valid").isEmail(),
         check("correo").custom(existenteEmailC),

@@ -14,7 +14,8 @@ const CompanySchema = mongoose.Schema({
         required: [true, "The phone is obligatory"],
     },
     nacionalidad: {
-
+        type: String,
+        required: [true, "The nationality is obligatory"],
     },
     nivelImpacto: {
         type: String,

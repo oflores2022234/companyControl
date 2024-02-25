@@ -44,4 +44,8 @@ export const validarAñosTrayectoria = async (años = "") => {
         throw new Error('The years of trayectory cannot be negative');
     }
 
+    if(años == 0){
+        throw new Error('The years of trayectory cannot be 0'); 
+    }
+
 }
