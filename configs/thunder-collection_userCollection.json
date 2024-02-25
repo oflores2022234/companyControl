@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-02-24T16:42:24.202Z",
+    "dateExported": "2024-02-25T01:49:51.569Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -76,12 +76,17 @@
             "colId": "a1b4f68c-e204-46db-9494-d274d6e9ee38",
             "containerId": "",
             "name": "usersDelete",
-            "url": "http://localhost:8080/companyControl/v1/users/65da13a821762085fb30ef82",
+            "url": "http://localhost:8080/companyControl/v1/users/65da112f0a81bba26d3a201f",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-02-24T16:31:51.710Z",
-            "modified": "2024-02-24T16:32:03.196Z",
-            "headers": [],
+            "modified": "2024-02-24T17:29:41.109Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRhMWE5NTk0MDdhMzBlNDA5NTE3ZGQiLCJpYXQiOjE3MDg3OTU3MjksImV4cCI6MTcwODc5OTMyOX0.4N7FNnkjaAZlURnPZoY5jEtxs9zJ-9EbPHnp_Djy4WY"
+                }
+            ],
             "params": [],
             "tests": []
         }

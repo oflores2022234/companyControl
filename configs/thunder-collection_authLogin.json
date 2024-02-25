@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "authLogin",
+    "dateExported": "2024-02-25T01:50:11.990Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b27e9b30-1f43-470e-8351-eb7295e8c08b",
+            "colId": "13ca23ab-40c9-4a31-ba78-22d49cbe7c8c",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:8080/companyControl/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-24T17:24:59.871Z",
+            "modified": "2024-02-24T17:28:49.193Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\":\"juanaAlejandro@gmail.com\",\n  \"password\":\"111111\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
