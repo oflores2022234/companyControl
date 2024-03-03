@@ -8,6 +8,7 @@ import {
     companyGetZA,
     companyYearsTrayectory,
     companiesPut,
+    companyGetCategory,
     generateExcelReport
 } from "./company.controller.js";
 
@@ -41,7 +42,8 @@ router.post(
 
     router.get("/companies", companyGetAZ);
     router.get("/companiess", companyGetZA);
-    router.get("/companiesYt", companyYearsTrayectory);
+    
+    router.get("/companiesCat", companyGetCategory);
 
 router.put(
     "/:id",

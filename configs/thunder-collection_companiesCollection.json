@@ -1,53 +1,58 @@
 {
     "client": "Thunder Client",
     "collectionName": "companiesCollection",
-    "dateExported": "2024-02-25T01:50:17.438Z",
+    "dateExported": "2024-03-03T04:44:19.454Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "2c91c07b-d966-48ca-8f3e-965ad8fa8a17",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "b8fb5a11-d812-4a1b-b5a3-614866bcd4b8",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "companyPost",
             "url": "http://localhost:8080/companyControl/v1/company",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-24T18:59:12.648Z",
-            "modified": "2024-02-24T22:01:32.570Z",
-            "headers": [],
+            "created": "2024-03-03T04:13:39.598Z",
+            "modified": "2024-03-03T04:15:10.615Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzZjkxNGQyYTIxYzBiMjQzNTllNDIiLCJpYXQiOjE3MDk0MzkyNzIsImV4cCI6MTcwOTQ0Mjg3Mn0.WaZy-tBBsYuPYelIYau8awpZCQCPa5rZ5YtwetdoKa8"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\":\"Alorica\",\n  \"correo\":\"`Alorica@gmail.com\",\n  \"telefono\":\"78451252\",\n  \"nacionalidad\":\"EEUU\",\n  \"nivelImpacto\":\"Alto\",\n  \"añosTrayectoria\": 20,\n  \"categoria\": \"Call Center\"\n}",
+                "raw": "{\n  \"nombre\":\"Aloricagt\",\n  \"correo\":\"`Aloricagt@gmail.com\",\n  \"telefono\":\"78451252\",\n  \"nacionalidad\":\"EEUU\",\n  \"nivelImpacto\":\"Alto\",\n  \"añosTrayectoria\": 20,\n  \"categoria\": \"Call Center\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "2ea632f4-b5fa-4a37-b17f-5431dde53a13",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "3ba3fe39-658d-4056-bc1e-b02717d43a53",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "getCompanies",
             "url": "http://localhost:8080/companyControl/v1/company",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-24T19:47:25.234Z",
-            "modified": "2024-02-24T19:47:32.298Z",
+            "created": "2024-03-03T04:13:39.600Z",
+            "modified": "2024-03-03T04:13:39.600Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "24c34d8c-5f51-45a1-b386-76a52348e6ff",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "5c74d1ee-1c5f-43b2-b4ca-d2734a526bfa",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "getCompaniesAZ",
             "url": "http://localhost:8080/companyControl/v1/company/companies?filtro=A-Z",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-02-24T20:05:29.312Z",
-            "modified": "2024-02-24T21:59:28.829Z",
+            "created": "2024-03-03T04:13:39.601Z",
+            "modified": "2024-03-03T04:13:39.601Z",
             "headers": [],
             "params": [
                 {
@@ -59,15 +64,15 @@
             "tests": []
         },
         {
-            "_id": "6e086a7d-84a6-4b70-b6ff-5fb1f4e3dc91",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "8b95e8a1-02d2-43a4-8299-7f62e9d149d9",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "getCompaniesZA",
             "url": "http://localhost:8080/companyControl/v1/company/companiess?filtro=Z-A",
             "method": "GET",
             "sortNum": 35000,
-            "created": "2024-02-24T22:08:04.847Z",
-            "modified": "2024-02-24T22:09:40.003Z",
+            "created": "2024-03-03T04:13:39.604Z",
+            "modified": "2024-03-03T04:13:39.604Z",
             "headers": [],
             "params": [
                 {
@@ -79,29 +84,49 @@
             "tests": []
         },
         {
-            "_id": "54f8947b-87b0-41bd-ab4d-869d9490a3bc",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "e9d779b4-0302-4466-935d-440d0229ab09",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "getCompaniesYT",
             "url": "http://localhost:8080/companyControl/v1/company/companiesYt",
             "method": "GET",
             "sortNum": 37500,
-            "created": "2024-02-24T22:26:48.069Z",
-            "modified": "2024-02-24T22:27:24.025Z",
+            "created": "2024-03-03T04:13:39.605Z",
+            "modified": "2024-03-03T04:13:39.605Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "716bdb99-c084-4ecd-b603-935b24407d5b",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "de0b4ff0-5333-425c-b1d0-11a715bd1b05",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
+            "containerId": "",
+            "name": "getCompaniesCat",
+            "url": "http://localhost:8080/companyControl/v1/company/companiesCat?categoria=Call Center",
+            "method": "GET",
+            "sortNum": 38750,
+            "created": "2024-03-03T04:31:32.778Z",
+            "modified": "2024-03-03T04:33:55.445Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "categoria",
+                    "value": "Call Center",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "bbeed016-3dc0-44af-ad2c-d6aba87caee4",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "companiesPut",
             "url": "http://localhost:8080/companyControl/v1/company/65da42e59649c7205e01635e",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-02-24T21:15:38.090Z",
-            "modified": "2024-02-24T21:17:47.537Z",
+            "created": "2024-03-03T04:13:39.602Z",
+            "modified": "2024-03-03T04:13:39.602Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -117,15 +142,15 @@
             "tests": []
         },
         {
-            "_id": "4dd49c97-97d8-44d4-98e1-3e1d0c80a50e",
-            "colId": "c34317a1-2d52-4ae7-b7fe-8d99c62d6e44",
+            "_id": "9868348b-6afb-4133-99ec-a2978d8f29eb",
+            "colId": "f4aa24e4-8afe-49a6-b6d1-8b69c6ea6eff",
             "containerId": "",
             "name": "generarReporte",
             "url": "http://localhost:8080/companyControl/v1/company/reporte-empresas",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2024-02-24T21:38:03.767Z",
-            "modified": "2024-02-24T21:41:18.389Z",
+            "created": "2024-03-03T04:13:39.603Z",
+            "modified": "2024-03-03T04:13:39.603Z",
             "headers": [],
             "params": [],
             "tests": []
