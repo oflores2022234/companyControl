@@ -67,6 +67,7 @@ export const companyGetZA = async (req = request, res = response) => {
                 .sort({ nombre: -1 }) 
                 .skip(Number(desde))
                 .limit(Number(limite))
+                
         ]);
 
         res.status(200).json({
